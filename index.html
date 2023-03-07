@@ -4,18 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      body { margin: 0; }
+      html, body {
+          height:100%;
+      margin:0;
+      }
 
-      iframe {
-        height:calc(100vh - 4px);
-        width:calc(100vw - 4px);
-        box-sizing: border-box;
+      .h_iframe {
+          position:relative;
+      }
+      .h_iframe .ratio {
+          display:block;
+          width:100%;
+          height:auto;
+      }
+      .h_iframe iframe {
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
       }
   </head>
   <body>
-      <iframe width="100%" height="100%"
-        src="https://script.google.com/a/macros/amoryschools.com/s/AKfycbyDbqg0LyUE1xt0gE9RRSsNl5moAS9hYTcwBKL07v6zmOakFTzp_9Yd_BZDkpukENvc/exec"
-        frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
-      </iframe>
+    <div class="video-container">
+        <div class="h_iframe">
+            <!-- a transparent image is preferable -->
+            <img class="ratio" src="http://placehold.it/16x9" />
+            <iframe src="https://script.google.com/a/macros/amoryschools.com/s/AKfycbyDbqg0LyUE1xt0gE9RRSsNl5moAS9hYTcwBKL07v6zmOakFTzp_9Yd_BZDkpukENvc/exec" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
   </body>
 </html>
