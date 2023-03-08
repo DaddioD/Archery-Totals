@@ -20,11 +20,11 @@
             }
             .iframe-row { flex-grow: 1; border: none; margin: 0; padding: 0; min-width: 100%; }
         </style>
-        <script>
-            window.setInterval("reloadIFrame();", 15000);
-
-            function reloadIFrame() {
-             document.frames["iframe-row"].location.reload();
+        <script type="text/javascript">
+            setInterval(refreshIframe, 5000);
+            function refreshIframe() {
+                var frame = document.getElementById("Scores");
+                frame.src = frame.src;
             }
         </script>
     </head>
@@ -33,6 +33,6 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <iframe class="iframe-row" src="https://script.google.com/macros/s/AKfycbyDbqg0LyUE1xt0gE9RRSsNl5moAS9hYTcwBKL07v6zmOakFTzp_9Yd_BZDkpukENvc/exec" frameborder="0"></iframe>
+        <iframe class="iframe-row" id="Scores" src="https://script.google.com/macros/s/AKfycbyDbqg0LyUE1xt0gE9RRSsNl5moAS9hYTcwBKL07v6zmOakFTzp_9Yd_BZDkpukENvc/exec" frameborder="0"></iframe>
     </body>
 </html>
