@@ -20,6 +20,13 @@
             }
             .iframe-row { flex-grow: 1; border: none; margin: 0; padding: 0; min-width: 100%; }
         </style>
+        <script>
+            window.setInterval("reloadIFrame();", 15000);
+
+            function reloadIFrame() {
+             document.frames["iframe-row"].location.reload();
+            }
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
